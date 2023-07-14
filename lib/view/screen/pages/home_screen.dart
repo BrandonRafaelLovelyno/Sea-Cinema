@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sea_cinema/const.dart';
 import 'package:sea_cinema/view/widget/home_screen/hour_box.dart';
 import 'package:sea_cinema/view/widget/home_screen/movie_caraousel.dart';
 import 'package:sea_cinema/view/widget/universal/logo.dart';
-import 'package:sea_cinema/view/widget/universal/transparent_box.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

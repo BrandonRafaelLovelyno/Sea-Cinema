@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 import 'package:sea_cinema/const.dart';
 import 'package:sea_cinema/model/movie_model.dart';
 import 'package:sea_cinema/view/widget/booking_screen/chair.dart';

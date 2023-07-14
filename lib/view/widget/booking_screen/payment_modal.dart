@@ -14,7 +14,7 @@ class PaymentModal extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
       decoration: BoxDecoration(
-        color: kTransparentGrey,
+        color: kTransparentGrey.withOpacity(0.3),
         borderRadius: BorderRadius.circular(60),
       ),
       child: SingleChildScrollView(
@@ -79,7 +79,7 @@ class PaymentModal extends StatelessWidget {
                   color: kLightLimeGreenColor,
                 ),
                 child: Text(
-                  "Book!",
+                  "Continue!",
                   style: GoogleFonts.poppins(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,

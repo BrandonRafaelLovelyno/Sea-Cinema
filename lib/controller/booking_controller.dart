@@ -134,7 +134,12 @@ class BookingController extends GetxController {
       await kUserController.topUpBalance(ticket.price, "Refund");
       //
       //Deleting the ticket chair-label in movies collection
-      await firestore.collection('movies').doc(ticket.title).update({
+      await firestore
+          .collection('movies')
+          .doc(ticket.title)
+          .collection('time')
+          .doc(_watchHour.value)
+          .update({
         'booked': FieldValue.arrayRemove([ticket.number])
       });
       //

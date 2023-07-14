@@ -75,43 +75,31 @@ class TicketCard extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      const SizedBox(
-                        height: 10,
-                      ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(
-                                DateFormat.yMMMd().format(ticket.date),
-                                style: GoogleFonts.poppins(
-                                  color: Colors.grey,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 4,
-                              ),
-                              Text(
-                                ticket.hour,
-                                style: GoogleFonts.poppins(
-                                  color: Colors.grey,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
+                          Text(
+                            DateFormat.yMMMd().format(ticket.date),
+                            style: GoogleFonts.poppins(
+                              color: Colors.grey,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
-                          const Spacer(),
+                          Text(
+                            ticket.hour,
+                            style: GoogleFonts.poppins(
+                              color: Colors.grey,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                           Text(
                             ticket.chairLabel,
-                            style: GoogleFonts.bebasNeue(
+                            style: GoogleFonts.poppins(
                               color: Colors.grey,
-                              fontSize: 30,
+                              fontSize: 25,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -172,8 +160,8 @@ class TicketCard extends StatelessWidget {
             },
             child: Container(
               alignment: Alignment.center,
-              width: 80,
-              height: 80,
+              width: 60,
+              height: 60,
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.red,
@@ -184,7 +172,7 @@ class TicketCard extends StatelessWidget {
               child: const Icon(
                 Icons.attach_money_outlined,
                 color: Colors.red,
-                size: 50,
+                size: 40,
               ),
             ),
           ),
