@@ -16,21 +16,24 @@ class MovieDetailScreen extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           "Movie Detail",
-          style: TextStyle(color: kLightGreenColor),
+          style: TextStyle(color: kLightGreenColor.withOpacity(0.8)),
         ),
         centerTitle: true,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_outlined),
+          icon: Icon(
+            Icons.arrow_back_ios_new_outlined,
+            color: kLightGreenColor.withOpacity(0.8),
+          ),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        actions: const [
+        actions: [
           Icon(
             Icons.bookmark_add_outlined,
-            color: kLightGreenColor,
+            color: kLightGreenColor.withOpacity(0.8),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
         ],
