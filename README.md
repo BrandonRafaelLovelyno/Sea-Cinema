@@ -3,6 +3,16 @@
 ## Description
 Sea_cinema is an android application that is specialized to provide information about some available movies and their ticket booking. The project is written in Dart. This app use Firebase as its bakcend-as-a-service (Baas) to simplify the backend task. This app is built with the MVC format to ease the organization of the backend stream. One of the important things to note is this app use controllers that inherit the GetXController.
 
+## Features
+* Authentication with Email & Password
+* Updating the profile picture
+* Top up and withdraw the user balance with password validation
+* Movie browser with carousel
+* Movie detailed information screen
+* Ticket booking with a stream data
+* Prohibition on booking for the user age requirement
+* Ticket cancelation in the Ticket screen
+
 ## Instalation
 
 1. Prerequisites
