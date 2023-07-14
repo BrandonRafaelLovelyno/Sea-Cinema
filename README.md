@@ -5,6 +5,7 @@ Sea_cinema is an android application that is specialized to provide information 
 
 ## Features
 * Authentication with Email & Password
+* Immediate Snackbar notification
 * Updating the profile picture
 * Top up and withdraw the user balance with password validation
 * Movie browser with carousel
