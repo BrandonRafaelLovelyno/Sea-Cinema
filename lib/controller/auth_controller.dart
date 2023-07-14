@@ -75,7 +75,7 @@ class AuthController extends GetxController {
             .collection('users')
             .doc(newUser.user!.uid)
             .set(userModel.toJson());
-        Get.snackbar("Crating user", "succes boss");
+        Get.snackbar("Crating user", "Success registering");
       } else {
         Get.snackbar("Creating user", "Please fill all the fields");
       }
