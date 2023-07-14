@@ -10,6 +10,7 @@ Sea_cinema is an android application that is specialized to provide information 
 * Movie browser with carousel
 * Movie detailed information screen
 * Ticket booking with a stream data
+* Choosing the watch hour
 * Prohibition on booking for the user age requirement
 * Ticket cancelation in the Ticket screen
 
