@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "768283637667",
+    "project_id": "sea-cinema-compfest",
+    "storage_bucket": "sea-cinema-compfest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768283637667:android:45f68076a0d6358523cc16",
+        "android_client_info": {
+          "package_name": "com.example.sea_cinema"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768283637667-hc5bj3ko9fcp0cb2s5vgva7540v9obs7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3gMM1htAkkKzU3Yl8cjfZB-1vwbdiGu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768283637667-hc5bj3ko9fcp0cb2s5vgva7540v9obs7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
