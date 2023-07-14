@@ -29,8 +29,8 @@ class _ChairWidgetState extends State<ChairWidget> {
               booked = false;
             });
           } else {
-            kBookingController.markOneChair(widget.chairLabel);
-            if (kBookingController.orderedList.length <= 6) {
+            if (kBookingController.orderedList.length < 6) {
+              kBookingController.markOneChair(widget.chairLabel);
               kBookingController.updateTotalPrice(widget.ticketPrice);
               setState(() {
                 booked = true;
