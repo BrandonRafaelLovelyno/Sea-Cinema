@@ -15,12 +15,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    TextStyle reusableTextStyle =
-        Theme.of(context).textTheme.bodyMedium!.copyWith(
-              color: Colors.white,
-              fontWeight: FontWeight.w600,
-              fontSize: 15,
-            );
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
@@ -52,13 +46,13 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               children: [
                 Expanded(child: HourBox(hour: "11")),
-                Expanded(child: HourBox(hour: "14")),
+                Expanded(child: HourBox(hour: "13")),
+                Expanded(child: HourBox(hour: "15")),
                 Expanded(child: HourBox(hour: "17")),
-                Expanded(child: HourBox(hour: "20")),
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 40,
             ),
             MovieCarousel(),
           ],

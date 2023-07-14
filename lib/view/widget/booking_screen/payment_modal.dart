@@ -56,6 +56,13 @@ class PaymentModal extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
+            ModalData(
+              subject: "Watch hour",
+              main: kBookingController.watchHour,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             InkWell(
               onTap: () async {
                 await kBookingController.bookTheTickets(movie);

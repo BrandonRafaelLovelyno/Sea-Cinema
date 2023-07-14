@@ -110,7 +110,7 @@ class MovieCarousel extends StatelessWidget {
         );
       },
       options: CarouselOptions(
-        height: 550,
+        height: 535,
         enlargeCenterPage: true,
         viewportFraction: 0.6,
       ),

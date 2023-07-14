@@ -19,6 +19,7 @@ class BookingController extends GetxController {
 
   void updateTheWatchHour(String hour) {
     _watchHour.value = hour;
+    Get.snackbar("Watchour", "You have chosen ${_watchHour.value}");
   }
 
   void updateTotalPrice(int ticketPrice) {
@@ -109,8 +110,9 @@ class BookingController extends GetxController {
         .collection('time')
         .doc(_watchHour.value)
         .get();
+    print(_watchHour.value);
     Map<String, dynamic> movieData = movieDoc.data() as Map<String, dynamic>;
-    List<dynamic> storeBookedList = movieData['booked'] as List<dynamic>;
+    List storeBookedList = movieData['booked'] as List;
     List<int> retVal = [];
     if (storeBookedList.isNotEmpty) {
       for (var label in storeBookedList) {

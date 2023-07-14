@@ -18,15 +18,15 @@ class TicketCard extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          padding: const EdgeInsets.all(15),
+          padding: const EdgeInsets.all(10),
           height: height,
           width: double.infinity,
           decoration: BoxDecoration(
             color: Colors.grey,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
-              width: 2,
-              color: kTransparentGrey,
+              width: 10,
+              color: Colors.grey.shade600,
             ),
             boxShadow: [
               BoxShadow(
@@ -75,17 +75,36 @@ class TicketCard extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text(
-                            DateFormat.yMMMd().format(ticket.date),
-                            style: GoogleFonts.poppins(
-                              color: Colors.grey,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w400,
-                            ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                DateFormat.yMMMd().format(ticket.date),
+                                style: GoogleFonts.poppins(
+                                  color: Colors.grey,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 4,
+                              ),
+                              Text(
+                                ticket.hour,
+                                style: GoogleFonts.poppins(
+                                  color: Colors.grey,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
                           ),
                           const Spacer(),
                           Text(

@@ -77,7 +77,7 @@ class _BookingScreenState extends State<BookingScreen> {
                           ),
                           Expanded(
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
@@ -89,17 +89,15 @@ class _BookingScreenState extends State<BookingScreen> {
                                     color: kLightLimeGreenColor,
                                   ),
                                   child: const Icon(
-                                    Icons.calendar_month,
+                                    Icons.watch_later_outlined,
                                     color: Colors.black,
                                   ),
                                 ),
                                 Text(
-                                  DateFormat.yMMMMd()
-                                      .format(widget.movie.releaseDate)
-                                      .toString(),
+                                  kBookingController.watchHour,
                                   style: GoogleFonts.inter(
                                     color: Colors.grey,
-                                    fontSize: 12,
+                                    fontSize: 20,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),

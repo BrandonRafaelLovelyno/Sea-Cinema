@@ -30,7 +30,10 @@ class _HourBoxState extends State<HourBox> {
                 : Colors.transparent,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
-              color: kTransparentGrey,
+              width: 3,
+              color: kBookingController.watchHour == widget.hour + ':00'
+                  ? kLightLimeGreenColor
+                  : kTransparentGrey,
             ),
           ),
           child: Column(
@@ -42,6 +45,10 @@ class _HourBoxState extends State<HourBox> {
                 style: GoogleFonts.nunitoSans(
                   fontSize: 30,
                   color: Colors.white,
+                  fontWeight:
+                      kBookingController.watchHour == widget.hour + ':00'
+                          ? FontWeight.bold
+                          : FontWeight.normal,
                 ),
               ),
               Container(
