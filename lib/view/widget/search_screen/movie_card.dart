@@ -21,7 +21,7 @@ class MovieCard extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(
-            colors: [kSeaGreenColor.withOpacity(0.8), kSeaGreenColor],
+            colors: [kLightGreenColor.withOpacity(0.8), kLightGreenColor],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),

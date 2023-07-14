@@ -48,7 +48,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   width: double.infinity,
                   child: const LogoWidget(
                     size: 40,
-                    iconColor: Colors.red,
+                    iconColor: kLightGreenColor,
                     fontColor: Colors.white,
                   ),
                 ),

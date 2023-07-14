@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: double.infinity,
                   child: const LogoWidget(
                     fontColor: Colors.white,
-                    iconColor: Colors.red,
+                    iconColor: kLightGreenColor,
                     size: 40,
                   ),
                 ),
