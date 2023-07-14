@@ -4,7 +4,6 @@ import 'package:sea_cinema/const.dart';
 import 'package:sea_cinema/model/movie_model.dart';
 import 'package:intl/intl.dart';
 import 'package:sea_cinema/view/screen/pages_detail/booking_detail_screen.dart';
-import 'package:sea_cinema/view/widget/universal/transparent_box.dart';
 
 class MovieDetailScreen extends StatelessWidget {
   const MovieDetailScreen({
@@ -17,14 +16,20 @@ class MovieDetailScreen extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Movie Detail"),
+        title: const Text(
+          "Movie Detail",
+          style: TextStyle(color: kLightGreenColor),
+        ),
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_outlined),
           onPressed: () => Navigator.of(context).pop(),
         ),
         actions: const [
-          Icon(Icons.bookmark_add_outlined),
+          Icon(
+            Icons.bookmark_add_outlined,
+            color: kLightGreenColor,
+          ),
           SizedBox(
             width: 20,
           ),
@@ -36,7 +41,7 @@ class MovieDetailScreen extends StatelessWidget {
             height: double.infinity,
             width: double.infinity,
             child: Image.network(
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMxioyiVEXWkMQQ41gekRB6uW3OHOHbse9aCcqburX4YXpdlUpQt0XC-7ZBMxPSsTO_Ic&usqp=CAU",
+              kBackGroundWall,
               fit: BoxFit.cover,
             ),
           ),
@@ -68,16 +73,19 @@ class MovieDetailScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          TransparentBox(
+                          Container(
                             height: 100,
                             width: 100,
-                            borderRadius: 20,
+                            decoration: BoxDecoration(
+                              color: kLightGreenColor,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 const Icon(
                                   Icons.panorama_wide_angle_sharp,
-                                  color: Colors.white,
+                                  color: Colors.black,
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -85,23 +93,26 @@ class MovieDetailScreen extends StatelessWidget {
                                 Text(
                                   "${selectedMovie.ageRating} years ",
                                   style: GoogleFonts.lato(
-                                    color: Colors.white,
+                                    color: Colors.black,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                          TransparentBox(
+                          Container(
                             height: 100,
                             width: 100,
-                            borderRadius: 20,
+                            decoration: BoxDecoration(
+                              color: kLightGreenColor,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 const Icon(
                                   Icons.date_range,
-                                  color: Colors.white,
+                                  color: Colors.black,
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -110,23 +121,26 @@ class MovieDetailScreen extends StatelessWidget {
                                   DateFormat.yMMMd()
                                       .format(selectedMovie.releaseDate),
                                   style: GoogleFonts.lato(
-                                    color: Colors.white,
+                                    color: Colors.black,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                          TransparentBox(
+                          Container(
                             height: 100,
                             width: 100,
-                            borderRadius: 20,
+                            decoration: BoxDecoration(
+                              color: kLightGreenColor,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 const Icon(
                                   Icons.theaters,
-                                  color: Colors.white,
+                                  color: Colors.black,
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -134,7 +148,7 @@ class MovieDetailScreen extends StatelessWidget {
                                 Text(
                                   "Rp.${selectedMovie.ticketPrice},00",
                                   style: GoogleFonts.lato(
-                                    color: Colors.white,
+                                    color: Colors.black,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
