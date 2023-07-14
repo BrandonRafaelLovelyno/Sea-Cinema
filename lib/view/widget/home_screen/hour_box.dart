@@ -26,13 +26,13 @@ class _HourBoxState extends State<HourBox> {
           height: 100,
           decoration: BoxDecoration(
             color: kBookingController.watchHour == widget.hour + ':00'
-                ? kTransparentGrey
+                ? kLightGreenColor
                 : Colors.transparent,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
               width: 3,
               color: kBookingController.watchHour == widget.hour + ':00'
-                  ? kLightLimeGreenColor
+                  ? kLightGreenColor
                   : kTransparentGrey,
             ),
           ),
@@ -44,7 +44,9 @@ class _HourBoxState extends State<HourBox> {
                 textAlign: TextAlign.left,
                 style: GoogleFonts.nunitoSans(
                   fontSize: 30,
-                  color: Colors.white,
+                  color: kBookingController.watchHour == widget.hour + ':00'
+                      ? Colors.black
+                      : Colors.white,
                   fontWeight:
                       kBookingController.watchHour == widget.hour + ':00'
                           ? FontWeight.bold
@@ -58,7 +60,9 @@ class _HourBoxState extends State<HourBox> {
                   style: GoogleFonts.oswald(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
-                    color: Colors.grey,
+                    color: kBookingController.watchHour == widget.hour + ':00'
+                        ? Colors.black
+                        : Colors.white,
                   ),
                 ),
               ),

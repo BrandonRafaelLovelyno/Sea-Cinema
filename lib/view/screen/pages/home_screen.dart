@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const LogoWidget(
           size: 30,
           fontColor: Colors.white,
-          iconColor: Colors.red,
+          iconColor: kLightGreenColor,
         ),
         actions: [
           CircleAvatar(

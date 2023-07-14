@@ -96,9 +96,9 @@ class MovieCarousel extends StatelessWidget {
                       borderRadius: 20,
                       child: InkWell(
                         onTap: () {},
-                        child: const Icon(
+                        child: Icon(
                           Icons.bookmark_add_outlined,
-                          color: Colors.white,
+                          color: kLightGreenColor.withOpacity(0.8),
                         ),
                       ),
                     ),

@@ -14,7 +14,7 @@ class PaymentModal extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
       decoration: BoxDecoration(
-        color: kTransparentGrey.withOpacity(0.3),
+        color: kTransparentGrey.withOpacity(0.2),
         borderRadius: BorderRadius.circular(60),
       ),
       child: SingleChildScrollView(
@@ -23,7 +23,7 @@ class PaymentModal extends StatelessWidget {
           children: [
             const LogoWidget(
               size: 20,
-              iconColor: Colors.red,
+              iconColor: kLightGreenColor,
               fontColor: Colors.white,
             ),
             const SizedBox(
