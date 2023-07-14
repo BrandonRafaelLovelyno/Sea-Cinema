@@ -10,10 +10,16 @@ class BookingController extends GetxController {
   Rx<List<int>> _bookedList = Rx<List<int>>([]);
   Rx<List<int>> _orderedList = Rx<List<int>>([]);
   Rx<int> _totalPrice = Rx<int>(0);
+  Rx<String> _watchHour = Rx<String>("11:00");
 
+  String get watchHour => _watchHour.value;
   int get totalPrice => (_totalPrice.value / 1000).toInt();
   List<int> get orderedList => _orderedList.value;
   List<int> get bookedList => _bookedList.value;
+
+  void updateTheWatchHour(String hour) {
+    _watchHour.value = hour;
+  }
 
   void updateTotalPrice(int ticketPrice) {
     _totalPrice.value = ticketPrice * _orderedList.value.length.toInt();
@@ -54,7 +60,9 @@ class BookingController extends GetxController {
         await firestore
             .collection('movies')
             .doc(movie.title)
-            .update({'booked': FieldValue.arrayUnion(_orderedList.value)});
+            .collection('time')
+            .doc(_watchHour.value)
+            .update({'booked': _orderedList.value});
 
         List<String> retVal = [];
         for (int label in _orderedList.value) {
@@ -82,8 +90,8 @@ class BookingController extends GetxController {
         }
         await kUserController.withdrawBalance(
             movie.ticketPrice * _orderedList.value.length, "Transfer");
-        await kTicketController.uploadTicketBuying(
-            _orderedList.value, retVal, movie, kUserController.userObject);
+        await kTicketController.uploadTicketBuying(_orderedList.value, retVal,
+            movie, kUserController.userObject, _watchHour.value);
         clearAllObservable();
         Get.offAll(const MainScreen());
       } else {
@@ -95,8 +103,12 @@ class BookingController extends GetxController {
   }
 
   Future<void> updateTheBookedList(String title) async {
-    DocumentSnapshot movieDoc =
-        await firestore.collection('movies').doc(title).get();
+    DocumentSnapshot movieDoc = await firestore
+        .collection('movies')
+        .doc(title)
+        .collection('time')
+        .doc(_watchHour.value)
+        .get();
     Map<String, dynamic> movieData = movieDoc.data() as Map<String, dynamic>;
     List<dynamic> storeBookedList = movieData['booked'] as List<dynamic>;
     List<int> retVal = [];

@@ -28,11 +28,12 @@ class TicketController extends GetxController {
   }
 
   Future<void> uploadTicketBuying(List<int> chairNumbers,
-      List<String> chairLabels, Movie movie, User userData) async {
+      List<String> chairLabels, Movie movie, User userData, String hour) async {
     List<Ticket> retVal = [];
     for (int i = 0; i < chairLabels.length; i++) {
       retVal.add(
         Ticket(
+          hour: hour,
           number: chairNumbers[i],
           price: movie.ticketPrice,
           chairLabel: chairLabels[i],

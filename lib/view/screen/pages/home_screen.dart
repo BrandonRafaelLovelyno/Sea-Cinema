@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sea_cinema/const.dart';
+import 'package:sea_cinema/view/widget/home_screen/hour_box.dart';
 import 'package:sea_cinema/view/widget/home_screen/movie_caraousel.dart';
 import 'package:sea_cinema/view/widget/universal/logo.dart';
 import 'package:sea_cinema/view/widget/universal/transparent_box.dart';
@@ -44,52 +46,21 @@ class _HomeScreenState extends State<HomeScreen> {
         margin: const EdgeInsets.only(
           top: 20,
         ),
-        child: Column(
+        child: const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
-                const SizedBox(
-                  width: 20,
-                ),
-                TransparentBox(
-                  height: 60,
-                  width: 150,
-                  borderRadius: 10,
-                  child: Text(
-                    "Franchise picking",
-                    style: reusableTextStyle.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white.withOpacity(0.6),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  flex: 1,
-                  child: TransparentBox(
-                    height: 60,
-                    width: double.infinity,
-                    borderRadius: 10,
-                    child: Text(
-                      "Cinema picking",
-                      style: reusableTextStyle.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white.withOpacity(0.6),
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
+                Expanded(child: HourBox(hour: "11")),
+                Expanded(child: HourBox(hour: "14")),
+                Expanded(child: HourBox(hour: "17")),
+                Expanded(child: HourBox(hour: "20")),
               ],
             ),
-            const SizedBox(
+            SizedBox(
               height: 20,
             ),
-            const MovieCarousel(),
+            MovieCarousel(),
           ],
         ),
       ),

@@ -10,8 +10,10 @@ class Ticket {
   final String uid;
   final int price;
   final int number;
+  final String hour;
 
   const Ticket({
+    required this.hour,
     required this.number,
     required this.chairLabel,
     required this.name,
@@ -34,12 +36,14 @@ class Ticket {
       'uid': uid,
       'price': price,
       'number': number,
+      'hour': hour,
     };
   }
 
   static Ticket fromSnap(DocumentSnapshot doc) {
     Map<String, dynamic> ticketData = doc.data() as Map<String, dynamic>;
     return Ticket(
+      hour: ticketData['hour'],
       number: ticketData['number'],
       price: ticketData['price'],
       chairLabel: ticketData['chairLabel'],

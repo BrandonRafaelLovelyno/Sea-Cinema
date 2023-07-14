@@ -5,7 +5,6 @@ import 'package:sea_cinema/const.dart';
 import 'package:sea_cinema/view/widget/profile_screen/balance_modal.dart';
 import 'package:sea_cinema/view/widget/profile_screen/subject_divider.dart';
 import 'package:sea_cinema/view/widget/profile_screen/user_profile_data.dart';
-import '';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
